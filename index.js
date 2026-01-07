@@ -25,6 +25,6 @@ const url = process.env.CONNECTION_URL;
 
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(url)
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: ${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
